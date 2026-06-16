@@ -8,6 +8,8 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star } from 'lucide-react';
+import mentor1 from '@/assets/mentor-1.jpg';
+import earning1 from '@/assets/earning-1.jpg';
 
 const team = [
   {
@@ -29,13 +31,20 @@ const team = [
     successImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop',
   },
   {
-    name: 'Emmanuel T.',
-    role: 'Technical Operations Lead',
-    image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/team-member-3-d20b8a6f-1781403701357.webp',
-    intro: 'Specialist in payment systems, withdrawal setup, and technical troubleshooting.',
-    bio: 'Emmanuel manages the technical hurdles of online tutoring. From VPN configurations to setting up complex international withdrawal methods like Payoneer and PayPal, he ensures that our tutors get paid for their hard work seamlessly.',
-    story: 'With a background in fintech and IT, Emmanuel joined FSL to solve the biggest pain point for African tutors: financial inclusion. He has developed custom workflows that bypass traditional banking limitations.',
-    successImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2340&auto=format&fit=crop',
+      id: 1,
+    name: 'Lari Fortune',
+    role: 'Online Coach & Tutor',
+    intro: 'Expert in online tutoring platforms with over 5 years of experience helping beginners scale their remote careers.',
+    story: 'Lari Fortune started from scratch, discovering the potential of online tutoring platforms when the remote work wave began. After successfully navigating the complexities of account creation and profile optimization, Lari decided to create FSL Education Hub to simplify the journey for others. Today, the hub has mentored hundreds of students into successful remote tutors.',
+    image: mentor1,
+    successImage: earning1,
+    // name: 'Emmanuel T.',
+    // role: 'Technical Operations Lead',
+    // image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/team-member-3-d20b8a6f-1781403701357.webp',
+    // intro: 'Specialist in payment systems, withdrawal setup, and technical troubleshooting.',
+    // bio: 'Emmanuel manages the technical hurdles of online tutoring. From VPN configurations to setting up complex international withdrawal methods like Payoneer and PayPal, he ensures that our tutors get paid for their hard work seamlessly.',
+    // story: 'With a background in fintech and IT, Emmanuel joined FSL to solve the biggest pain point for African tutors: financial inclusion. He has developed custom workflows that bypass traditional banking limitations.',
+    // successImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2340&auto=format&fit=crop',
   },
 ];
 
