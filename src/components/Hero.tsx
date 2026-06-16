@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import flyer from '@/assets/flyer.jpg'
 
 export const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -138,7 +139,7 @@ export const Hero = () => {
           <div className="relative hidden lg:block">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
               <img 
-                src="https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/hero-background-d0b77479-1781403699273.webp" 
+                src= {flyer}
                 alt="FSL Education Hub"
                 className="w-full h-auto object-cover"
               />

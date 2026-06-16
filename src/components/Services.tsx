@@ -77,36 +77,36 @@ const services = [
 ];
 
 export const Services = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
+  // const containerRef = useRef<HTMLDivElement>(null);
+  // const cardsRef = useRef<HTMLDivElement[]>([]);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.section-title', {
-        scrollTrigger: {
-          trigger: '.section-title',
-          start: 'top 80%',
-        },
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-      });
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.from('.section-title', {
+  //       scrollTrigger: {
+  //         trigger: '.section-title',
+  //         start: 'top 80%',
+  //       },
+  //       y: 30,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //     });
 
-      gsap.from(cardsRef.current, {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 75%',
-        },
-        y: 50,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power2.out',
-      });
-    }, containerRef);
+  //     gsap.from(cardsRef.current, {
+  //       scrollTrigger: {
+  //         trigger: containerRef.current,
+  //         start: 'top 75%',
+  //       },
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.6,
+  //       stagger: 0.1,
+  //       ease: 'power2.out',
+  //     });
+  //   }, containerRef);
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <section id="services" className="py-24 bg-[#F8F8FA]">
@@ -119,13 +119,13 @@ export const Services = () => {
         </div>
 
         <div 
-          ref={containerRef}
+          // ref={containerRef}
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {services.map((service, index) => (
             <div
               key={service.title}
-              ref={(el) => { if (el) cardsRef.current[index] = el; }}
+              // ref={(el) => { if (el) cardsRef.current[index] = el; }}
               className="bg-white p-8 rounded-2xl shadow-sm border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300 group"
             >
               <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
@@ -140,7 +140,7 @@ export const Services = () => {
           
           {/* Custom Card for "And More" */}
           <div
-            ref={(el) => { if (el) cardsRef.current[services.length] = el; }}
+            // ref={(el) => { if (el) cardsRef.current[services.length] = el; }}
             className="bg-primary p-8 rounded-2xl shadow-lg border border-primary flex flex-col justify-center items-center text-center text-white group"
           >
             <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mb-6">

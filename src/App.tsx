@@ -22,11 +22,11 @@ function App() {
           <WhyChoose />
           <Results />
           <Team />
-          <Community />
+          {/* <Community /> */}
           <Pricing />
           <Testimonials />
           <FAQ />
-          <Contact />
+          {/* <Contact /> */}
         </main>
         <Footer />
       </div>

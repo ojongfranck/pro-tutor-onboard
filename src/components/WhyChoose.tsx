@@ -39,28 +39,31 @@ const benefits = [
 ];
 
 export const WhyChoose = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  // const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.benefit-card', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-        },
-        scale: 0.9,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'back.out(1.7)',
-      });
-    }, sectionRef);
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.from('.benefit-card', {
+  //       scrollTrigger: {
+  //         trigger: sectionRef.current,
+  //         start: 'top 70%',
+  //       },
+  //       scale: 0.9,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.1,
+  //       ease: 'back.out(1.7)',
+  //     });
+  //   }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
-    <section ref={sectionRef} id="benefits" className="py-24 bg-white overflow-hidden">
+    <section 
+    // ref={sectionRef} 
+    id="benefits" 
+    className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

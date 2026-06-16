@@ -9,42 +9,39 @@ import {
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star } from 'lucide-react';
 import mentor1 from '@/assets/mentor-1.jpg';
+import mentor2 from '@/assets/mentor-2.jpg';
+import mentor3 from '@/assets/mentor-3.jpg';
 import earning1 from '@/assets/earning-1.jpg';
+import earning2 from '@/assets/earning-2.jpg';
+import earning3 from '@/assets/earning-3.jpg';
 
 const team = [
   {
-    name: 'Samuel Foka',
-    role: 'Founder & Senior Consultant',
-    image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/team-member-1-85ef76bf-1781403699507.webp',
-    intro: 'Expert in international tutoring platform algorithms and profile optimization.',
-    bio: 'Samuel has over 8 years of experience in the online education sector. He has successfully helped hundreds of tutors establish their presence on platforms like Preply, Cambly, and Italki. His deep understanding of platform approval processes makes him an invaluable asset to our team.',
-    story: 'After facing numerous rejections himself, Samuel developed a systematic approach to profile creation that guarantees success. He founded FSL Education Hub to share this knowledge with aspiring educators across Africa and beyond.',
-    successImage: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/success-result-1-8c5fcb6a-1781403698966.webp',
-  },
-  {
-    name: 'Lydia M. Nchinda',
-    role: 'Head of Tutor Success',
-    image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/team-member-2-2992d56b-1781403699245.webp',
-    intro: 'Dedicated to personalized mentorship and 1-on-1 tutor support.',
-    bio: 'Lydia specializes in teacher training and curriculum development. She ensures that every tutor who joins our hub is not just platform-ready, but also classroom-ready. Her focus is on pedagogical excellence and student engagement strategies.',
-    story: 'Lydia believes that every educator has a unique voice. She works closely with our tutors to help them find their niche and develop a teaching style that attracts and retains students in the competitive global market.',
-    successImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop',
-  },
-  {
-      id: 1,
+    id: 1,
     name: 'Lari Fortune',
     role: 'Online Coach & Tutor',
     intro: 'Expert in online tutoring platforms with over 5 years of experience helping beginners scale their remote careers.',
     story: 'Lari Fortune started from scratch, discovering the potential of online tutoring platforms when the remote work wave began. After successfully navigating the complexities of account creation and profile optimization, Lari decided to create FSL Education Hub to simplify the journey for others. Today, the hub has mentored hundreds of students into successful remote tutors.',
     image: mentor1,
     successImage: earning1,
-    // name: 'Emmanuel T.',
-    // role: 'Technical Operations Lead',
-    // image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/team-member-3-d20b8a6f-1781403701357.webp',
-    // intro: 'Specialist in payment systems, withdrawal setup, and technical troubleshooting.',
-    // bio: 'Emmanuel manages the technical hurdles of online tutoring. From VPN configurations to setting up complex international withdrawal methods like Payoneer and PayPal, he ensures that our tutors get paid for their hard work seamlessly.',
-    // story: 'With a background in fintech and IT, Emmanuel joined FSL to solve the biggest pain point for African tutors: financial inclusion. He has developed custom workflows that bypass traditional banking limitations.',
-    // successImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2340&auto=format&fit=crop',
+  },
+    {
+    id: 2,
+    name: 'Hon. Shirley Lakeh',
+    role: 'Online Coach & Tutor',
+    intro: 'Expert in online tutoring platforms with over 5 years of experience helping beginners scale their remote careers.',
+    story: 'Lari Fortune started from scratch, discovering the potential of online tutoring platforms when the remote work wave began. After successfully navigating the complexities of account creation and profile optimization, Lari decided to create FSL Education Hub to simplify the journey for others. Today, the hub has mentored hundreds of students into successful remote tutors.',
+    image: mentor2,
+    successImage: earning2,
+  },
+    {
+    id: 3,
+    name: 'Franck Ronald',
+    role: 'Online Coach & Tutor',
+    intro: 'Expert in online tutoring platforms with over 5 years of experience helping beginners scale their remote careers.',
+    story: 'Lari Fortune started from scratch, discovering the potential of online tutoring platforms when the remote work wave began. After successfully navigating the complexities of account creation and profile optimization, Lari decided to create FSL Education Hub to simplify the journey for others. Today, the hub has mentored hundreds of students into successful remote tutors.',
+    image: mentor3,
+    successImage: earning3,
   },
 ];
 
@@ -103,32 +100,32 @@ export const Team = () => {
                         </div>
                       </div>
                       <div className="p-8 md:p-12 lg:overflow-y-auto">
-                        <div className="flex items-center gap-1 mb-6">
+                        {/* <div className="flex items-center gap-1 mb-6">
                            {[...Array(5)].map((_, i) => (
                              <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                            ))}
-                        </div>
+                        </div> */}
                         <DialogHeader className="mb-8">
                           <DialogTitle className="text-3xl md:text-4xl font-bold mb-2">{member.name}</DialogTitle>
                           <div className="text-primary font-bold text-xl uppercase tracking-wider">{member.role}</div>
                         </DialogHeader>
                         
                         <div className="space-y-8">
-                          <div>
-                            <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
+                          {/* <div> */}
+                            {/* <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
                               <span className="w-8 h-[2px] bg-primary"></span>
                               Biography
-                            </h4>
-                            <p className="text-muted-foreground leading-relaxed">
+                            </h4> */}
+                            {/* <p className="text-muted-foreground leading-relaxed">
                               {member.bio}
-                            </p>
-                          </div>
+                            </p> */}
+                          {/* </div> */}
                           
                           <div>
-                            <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
+                            {/* <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
                               <span className="w-8 h-[2px] bg-primary"></span>
                               The Success Story
-                            </h4>
+                            </h4> */}
                             <p className="text-muted-foreground leading-relaxed">
                               {member.story}
                             </p>
