@@ -128,16 +128,16 @@ export const Footer = () => {
             <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <span>+237 680 72 11 15</span>
+                <span>+237 690 538 912</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <span>contact@fsleducationhub.com</span>
+                <span>fsltutoracademy@gmail.com</span>
               </li>
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <span>Yaoundé, Cameroon</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

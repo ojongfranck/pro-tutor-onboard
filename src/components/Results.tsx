@@ -1,46 +1,81 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import one from '@/assets/one.jpg';
+import two from '@/assets/two.jpg';
+import three from '@/assets/three.jpg';
+import four from '@/assets/four.jpg';
+import five from '@/assets/five.jpg';
+import six from '@/assets/six.jpg';
+import seven from '@/assets/seven.jpg';
+import eight from '@/assets/eight.jpg';
+import nine from '@/assets/nine.jpg';
+import ten from '@/assets/ten.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const results = [
   {
-    title: 'Approved International Account',
-    description: 'Successful approval on a major global platform within 72 hours.',
-    image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/success-result-1-8c5fcb6a-1781403698966.webp',
-    tag: 'Platform Approval',
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: one,
+    // tag: 'Platform Approval',
   },
-  {
-    title: 'Profile Optimization Growth',
-    description: '300% increase in student profile views after strategic keyword optimization.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
-    tag: 'Visibility',
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: two,
+    // tag: 'Platform Approval',
   },
-  {
-    title: 'Withdrawal Setup Success',
-    description: 'Seamless integration of international payment methods for a tutor in Africa.',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2340&auto=format&fit=crop',
-    tag: 'Payment Setup',
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: three,
+    // tag: 'Platform Approval',
   },
-  {
-    title: 'Lesson Plan Deployment',
-    description: 'Tutor started teaching immediately with our pre-made curriculum.',
-    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2340&auto=format&fit=crop',
-    tag: 'Curriculum',
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: four,
+    // tag: 'Platform Approval',
   },
-  {
-    title: 'Monthly Earning Milestone',
-    description: 'First $1000 month achieved within 3 months of account creation.',
-    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2342&auto=format&fit=crop',
-    tag: 'Earnings',
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: five,
+    // tag: 'Platform Approval',
   },
-  {
-    title: '1-on-1 Mentorship Result',
-    description: 'Transitioned from part-time to full-time online educator.',
-    image: 'https://storage.googleapis.com/dala-prod-public-storage/generated-images/d5153879-aba9-4ac9-a13d-dd3d60e45b2a/hero-background-d0b77479-1781403699273.webp',
-    tag: 'Success Story',
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: six,
+    // tag: 'Platform Approval',
   },
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: seven,
+    // tag: 'Platform Approval',
+  },
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: eight,
+    // tag: 'Platform Approval',
+  },
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: nine,
+    // tag: 'Platform Approval',
+  },
+    {
+    // title: 'Approved International Account',
+    // description: 'Successful approval on a major global platform within 72 hours.',
+    image: ten,
+    // tag: 'Platform Approval',
+  },
+  
 ];
 
 export const Results = () => {
@@ -96,18 +131,18 @@ export const Results = () => {
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden mb-6 border border-white/10">
                 <img 
                   src={result.image} 
-                  alt={result.title}
+                  // alt={result.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4 bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                {/* <div className="absolute top-4 left-4 bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
                   {result.tag}
-                </div>
+                </div> */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{result.title}</h3>
-              <p className="text-white/60 leading-relaxed line-clamp-2">
+              {/* <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{result.title}</h3> */}
+              {/* <p className="text-white/60 leading-relaxed line-clamp-2">
                 {result.description}
-              </p>
+              </p> */}
             </div>
           ))}
           

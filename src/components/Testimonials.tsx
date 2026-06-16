@@ -5,44 +5,54 @@ import { Star, Quote } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// const testimonials = [
+//   {
+//     name: 'Sarah Johnson',
+//     role: 'English Tutor',
+//     content: 'FSL Education Hub completely changed my approach. My account was approved in 2 days after months of trying on my own!',
+//     rating: 5,
+//   },
+//   {
+//     name: 'David Mendy',
+//     role: 'Mathematics Specialist',
+//     content: 'The profile optimization is worth every penny. I went from zero students to a fully booked schedule in 3 weeks.',
+//     rating: 5,
+//   },
+//   {
+//     name: 'Elena Rodriguez',
+//     role: 'Language Instructor',
+//     content: 'Highly professional team. They walked me through the withdrawal setup which was the biggest hurdle for me.',
+//     rating: 5,
+//   },
+//   {
+//     name: 'Koffi Anan',
+//     role: 'Science Tutor',
+//     content: 'The lesson plans provided gave me the confidence to start my first class without feeling overwhelmed.',
+//     rating: 5,
+//   },
+//   {
+//     name: 'Michelle Chen',
+//     role: 'ESL Coach',
+//     content: 'Best investment for my teaching career. The 1-on-1 support is personalized and very effective.',
+//     rating: 5,
+//   },
+//   {
+//     name: 'James Wilson',
+//     role: 'Academic Consultant',
+//     content: 'Approval experiences can be tricky, but FSL made it look easy. I highly recommend their services.',
+//     rating: 5,
+//   },
+// ];
+
 const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    role: 'English Tutor',
-    content: 'FSL Education Hub completely changed my approach. My account was approved in 2 days after months of trying on my own!',
-    rating: 5,
-  },
-  {
-    name: 'David Mendy',
-    role: 'Mathematics Specialist',
-    content: 'The profile optimization is worth every penny. I went from zero students to a fully booked schedule in 3 weeks.',
-    rating: 5,
-  },
-  {
-    name: 'Elena Rodriguez',
-    role: 'Language Instructor',
-    content: 'Highly professional team. They walked me through the withdrawal setup which was the biggest hurdle for me.',
-    rating: 5,
-  },
-  {
-    name: 'Koffi Anan',
-    role: 'Science Tutor',
-    content: 'The lesson plans provided gave me the confidence to start my first class without feeling overwhelmed.',
-    rating: 5,
-  },
-  {
-    name: 'Michelle Chen',
-    role: 'ESL Coach',
-    content: 'Best investment for my teaching career. The 1-on-1 support is personalized and very effective.',
-    rating: 5,
-  },
-  {
-    name: 'James Wilson',
-    role: 'Academic Consultant',
-    content: 'Approval experiences can be tricky, but FSL made it look easy. I highly recommend their services.',
-    rating: 5,
-  },
+  { content: "I finally understood how tutoring platforms work.", name: "Chiamaka N.", role: "New tutor",rating: 5 },
+  { content: "The guidance helped me create my tutoring profile confidently.", name: "Samuel A.", role: "Beginner",rating: 5 },
+  { content: "I stopped wasting time and finally got clarity.", name: "Grace E.", role: "Mentee",rating: 5 },
+  { content: "Step-by-step support made all the difference for me.", name: "Tunde O.", role: "First-time tutor",rating: 5 },
+  { content: "Within weeks I had my first student lined up.", name: "Ada M.", role: "Student",rating: 5 },
+  { content: "Worth every franc. The community alone is gold.", name: "Marvin K.", role: "Mentee",rating: 5 },
 ];
+
 
 export const Testimonials = () => {
   const sectionRef = useRef<HTMLElement>(null);
