@@ -9,7 +9,8 @@ import { Community } from './components/Community';
 import { Pricing } from './components/Pricing';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
-import { Contact, Footer } from './components/Contact';
+// import { Contact, Footer } from './components/Contact';
+import {Footer} from '@/components/Footer';
 
 function App() {
   return (

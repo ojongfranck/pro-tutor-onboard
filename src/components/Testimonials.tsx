@@ -1,138 +1,123 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
 import { Star, Quote } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
-
-// const testimonials = [
-//   {
-//     name: 'Sarah Johnson',
-//     role: 'English Tutor',
-//     content: 'FSL Education Hub completely changed my approach. My account was approved in 2 days after months of trying on my own!',
-//     rating: 5,
-//   },
-//   {
-//     name: 'David Mendy',
-//     role: 'Mathematics Specialist',
-//     content: 'The profile optimization is worth every penny. I went from zero students to a fully booked schedule in 3 weeks.',
-//     rating: 5,
-//   },
-//   {
-//     name: 'Elena Rodriguez',
-//     role: 'Language Instructor',
-//     content: 'Highly professional team. They walked me through the withdrawal setup which was the biggest hurdle for me.',
-//     rating: 5,
-//   },
-//   {
-//     name: 'Koffi Anan',
-//     role: 'Science Tutor',
-//     content: 'The lesson plans provided gave me the confidence to start my first class without feeling overwhelmed.',
-//     rating: 5,
-//   },
-//   {
-//     name: 'Michelle Chen',
-//     role: 'ESL Coach',
-//     content: 'Best investment for my teaching career. The 1-on-1 support is personalized and very effective.',
-//     rating: 5,
-//   },
-//   {
-//     name: 'James Wilson',
-//     role: 'Academic Consultant',
-//     content: 'Approval experiences can be tricky, but FSL made it look easy. I highly recommend their services.',
-//     rating: 5,
-//   },
-// ];
+import img1 from '@/assets/img-1.jpg';
+import img2 from '@/assets/img-2.jpg';
+import img3 from '@/assets/img-3.jpg';
+import img4 from '@/assets/img-4.jpg';
+import img5 from '@/assets/img-5.jpg';
+import img6 from '@/assets/img-6.jpg';
 
 const testimonials = [
-  { content: "I finally understood how tutoring platforms work.", name: "Chiamaka N.", role: "New tutor",rating: 5 },
-  { content: "The guidance helped me create my tutoring profile confidently.", name: "Samuel A.", role: "Beginner",rating: 5 },
-  { content: "I stopped wasting time and finally got clarity.", name: "Grace E.", role: "Mentee",rating: 5 },
-  { content: "Step-by-step support made all the difference for me.", name: "Tunde O.", role: "First-time tutor",rating: 5 },
-  { content: "Within weeks I had my first student lined up.", name: "Ada M.", role: "Student",rating: 5 },
-  { content: "Worth every franc. The community alone is gold.", name: "Marvin K.", role: "Mentee",rating: 5 },
+  {
+    name: 'Blessing A.',
+    text: 'I finally understood how tutoring platforms work.',
+    location: 'New Tutor',
+    review: img1,
+  },
+  {
+    name: 'Koffi D.',
+    text: 'The guidance helped me create my tutoring profile confidently.',
+    location: 'Beginner',
+    review: img2,
+  },
+  {
+    name: 'Sarah M.',
+    text: 'I stopped wasting time and finally got clarity.',
+    location: 'Mentee',
+    review: img3,
+  },
+  {
+    name: 'Emeka O.',
+    text: 'Step-by-step support made all the difference for me.',
+    location: 'First-time Tutor',
+    review: img4,
+  },
+  {
+    name: 'Fatima S.',
+    text: 'Within weeks I had my first student lined up.',
+    location: 'student',
+    review: img5,
+  },
+//   {
+//     name: 'John K.',
+//     text: 'Worth every franc. The community alone is gold.',
+//     location: 'Mentee',
+//     review: review6,
+//   },
 ];
 
-
-export const Testimonials = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+export function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const scrollWidth = scrollRef.current!.offsetWidth;
-      const amountToScroll = scrollWidth - window.innerWidth;
+  useLayoutEffect(() => {
+    const scrollWidth = scrollRef.current?.scrollWidth || 0;
+    const windowWidth = window.innerWidth;
+    
+    const animation = gsap.to(scrollRef.current, {
+      x: `-${scrollWidth / 2}`,
+      duration: 30,
+      ease: 'none',
+      repeat: -1,
+    });
 
-      gsap.to(scrollRef.current, {
-        x: -amountToScroll,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: `+=${scrollWidth}`,
-          pin: true,
-          scrub: 1,
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
+    return () => {
+      animation.kill();
+    };
   }, []);
 
   return (
-    <section ref={sectionRef} id="testimonials" className="overflow-hidden bg-white py-0">
-      <div className="h-screen flex flex-col justify-center">
-        <div className="container mx-auto px-4 md:px-6 mb-12">
-          <div className="flex items-center gap-4 mb-4">
-             <div className="h-[2px] w-12 bg-primary"></div>
-             <span className="text-primary font-bold uppercase tracking-widest text-sm">Testimonials</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">What Our <span className="text-primary">Tutors Say</span></h2>
-        </div>
+    <section id="testimonials" className="py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-16">
+        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center">
+          What My <span className="text-brand-magenta">Students Say</span>
+        </h2>
+        {/* <p className="text-gray-600 max-w-2xl mx-auto text-lg text-center">
+          Join 2+ successful mentorship clients who have transformed their careers with FSL Tutor Academy.
+        </p> */}
+      </div>
 
-        <div ref={scrollRef} className="flex gap-6 px-4 md:px-12 w-fit pb-12">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="w-[300px] md:w-[450px] flex-shrink-0 bg-[#F8F8FA] p-8 md:p-12 rounded-[2rem] border border-border relative group"
+      <div className="flex relative">
+        <div ref={scrollRef} className="flex gap-8 whitespace-nowrap">
+          {[...testimonials, ...testimonials].map((t, index) => (
+            <div
+              key={index}
+              className="w-[350px] flex-shrink-0 bg-gray-50  rounded-[2rem] border border-gray-100 relative group hover:bg-white hover:shadow-xl transition-all duration-300"
             >
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-primary/10 group-hover:text-primary/20 transition-colors" />
+              {/* <div className="absolute top-6 right-8 text-brand-magenta/10 group-hover:text-brand-magenta/20 transition-colors">
+                <Quote size={40} fill="currentColor" />
+              </div> */}
               
-              <div className="flex gap-1 mb-6">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+              {/* <div className="flex gap-1 text-brand-gold mb-6">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} size={16} fill="currentColor" />
                 ))}
-              </div>
+              </div> */}
               
-              <p className="text-xl text-foreground/80 mb-8 leading-relaxed italic">
-                "{testimonial.content}"
-              </p>
+              {/* <p className="text-gray-700 text-lg leading-relaxed mb-8 whitespace-normal italic">
+                "{t.text}"
+              </p> */}
+
+              <img 
+              src= {t.review}
+              alt="" 
+              className='w-full h-full rounded-sm'
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <div className="font-bold text-lg">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                </div>
-              </div>
+              />
+              
+              {/* <div className="flex items-center gap-4"> */}
+                {/* <div className="w-12 h-12 rounded-full bg-brand-magenta/10 flex items-center justify-center text-brand-magenta font-bold"> */}
+                  {/* {t.name[0]} */}
+                {/* </div> */}
+                {/* <div> */}
+                  {/* <p className="font-bold text-gray-900">{t.name}</p> */}
+                  {/* <p className="text-sm text-gray-500">{t.location}</p> */}
+                {/* </div> */}
+              {/* </div> */}
             </div>
           ))}
-          
-          {/* Join the Community Card */}
-          <div className="w-[300px] md:w-[450px] flex-shrink-0 flex flex-col justify-center items-center bg-accent/10 border-2 border-dashed border-accent/40 rounded-[2rem] p-12 text-center">
-             <h3 className="text-2xl font-bold mb-4">Join 50+ Successful Tutors</h3>
-             <p className="text-muted-foreground mb-8">Start your own success story with FSL Education Hub today.</p>
-             <a 
-               href="https://wa.me/237680721115" 
-               className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all"
-             >
-               Apply Now
-             </a>
-          </div>
         </div>
       </div>
     </section>
   );
-};
+}

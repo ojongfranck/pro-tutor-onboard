@@ -61,7 +61,7 @@ export const FAQ = () => {
             ))}
           </Accordion>
           
-          <div className="mt-16 p-8 bg-accent/10 rounded-3xl border-2 border-dashed border-accent/30 text-center">
+          {/* <div className="mt-16 p-8 bg-accent/10 rounded-3xl border-2 border-dashed border-accent/30 text-center">
              <h4 className="text-xl font-bold mb-2">Still have questions?</h4>
              <p className="text-muted-foreground mb-6">Our team is ready to provide you with all the answers you need.</p>
              <a 
@@ -70,7 +70,7 @@ export const FAQ = () => {
              >
                Chat with us on WhatsApp
              </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -97,12 +97,12 @@ export const Pricing = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
            <p className="text-muted-foreground mb-4">Need a custom enterprise setup or have questions?</p>
            <a href="https://wa.me/237680721115" className="text-primary font-bold border-b-2 border-primary hover:text-accent hover:border-accent transition-colors">
               Talk to a consultant directly
            </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

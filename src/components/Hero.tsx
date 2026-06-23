@@ -94,6 +94,20 @@ export const Hero = () => {
               Start Teaching & <br />
               <span className="text-primary">Earning Online</span>
             </h1>
+
+            
+            <div className="relative lg:hidden">
+            <div className="relative z-10 rounded-2xl shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+              <img 
+                src= {flyer}
+                alt="FSL Education Hub"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            {/* Decorative Gold Accent */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent rounded-2xl -z-10 opacity-50" />
+            <div className="absolute -top-6 -left-6 w-48 h-48 border-2 border-primary/20 rounded-2xl -z-10" />
+          </div>
             
             <p 
               ref={subheadlineRef}
@@ -112,18 +126,18 @@ export const Hero = () => {
             </div>
 
             <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-7 text-lg h-auto group">
+              {/* <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-7 text-lg h-auto group">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   Start on WhatsApp
                   <MessageCircle className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                 </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-7 text-lg h-auto border-primary/20 hover:bg-primary/5 text-primary">
+              </Button> */}
+              {/* <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-7 text-lg h-auto border-primary/20 hover:bg-primary/5 text-primary">
                 <a href="#services">
                   Explore Services
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
-              </Button>
+              </Button> */}
             </div>
 
             <div ref={statsRef} className="flex flex-wrap gap-12 border-t border-border pt-8">
